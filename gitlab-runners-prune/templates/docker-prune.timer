@@ -1,0 +1,10 @@
+[Unit]
+Description=Prune unused Docker images every day
+
+[Timer]
+OnCalendar=*-*-* 1:00:00
+Persistent=true
+Unit=docker-prune.service
+
+[Install]
+WantedBy=timers.target
